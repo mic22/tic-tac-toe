@@ -3,7 +3,7 @@ require 'board'
 
 
 class Game
-	attr_reader :players
+	attr_reader :players, :board
 
 	def initialize
 		@players = [Player.new(0,0, 'x'), Player.new(1,1, 'y')]
