@@ -1,17 +1,14 @@
 class Game
-	def initialize
-		@players = [Player.new(0,0, 'x'), Player.new(1,1, 'y')]
+	def initialize p1, p2
+		@players = [p1, p2]
 		@board = Board.new 3, 3
 	end	
 	
 	def make_move
 		player=@players[0]
+		player.x(0).y(0)
 		@board.make_move(player.x, player.y, player.symbol)
-		swich_players
+    @players.reverse!
 	end
-	
-	def swich_players
-		@players[0], @players[1] = @players[1], @players[0]
-	end	
 end
 
