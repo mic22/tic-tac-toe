@@ -1,4 +1,10 @@
+require 'player'
+require 'board'
+
+
 class Game
+	attr_reader :players, :board
+
 	def initialize p1, p2
 		@players = [p1, p2]
 		@board = Board.new 3, 3
@@ -11,4 +17,3 @@ class Game
     @players.reverse!
 	end
 end
-
