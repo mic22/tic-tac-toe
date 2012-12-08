@@ -1,4 +1,10 @@
+require 'player'
+require 'board'
+
+
 class Game
+	attr_reader :players
+
 	def initialize
 		@players = [Player.new(0,0, 'x'), Player.new(1,1, 'y')]
 		@board = Board.new 3, 3
@@ -14,4 +20,3 @@ class Game
 		@players[0], @players[1] = @players[1], @players[0]
 	end	
 end
-
