@@ -1,0 +1,1 @@
+describe Game do	it "should store two players" do		game = Game.new()		game.players.size.should eq(2)	endend
