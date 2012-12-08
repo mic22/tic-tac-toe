@@ -1,1 +1,3 @@
-*.swp*.swoGemfile.lock
+*.swp
+*.swo
+Gemfile.lock
